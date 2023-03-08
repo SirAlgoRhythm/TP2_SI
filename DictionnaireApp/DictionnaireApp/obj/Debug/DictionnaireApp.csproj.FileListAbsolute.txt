@@ -9,3 +9,14 @@ C:\Users\Antoi\source\repos\SirAlgoRhythm\TP2_SI\DictionnaireApp\DictionnaireApp
 C:\Users\Antoi\source\repos\SirAlgoRhythm\TP2_SI\DictionnaireApp\DictionnaireApp\obj\Debug\DictionnaireApp.csproj.CoreCompileInputs.cache
 C:\Users\Antoi\source\repos\SirAlgoRhythm\TP2_SI\DictionnaireApp\DictionnaireApp\obj\Debug\DictionnaireApp.exe
 C:\Users\Antoi\source\repos\SirAlgoRhythm\TP2_SI\DictionnaireApp\DictionnaireApp\obj\Debug\DictionnaireApp.pdb
+C:\Users\Antoi\Source\Repos\TP2_SI\DictionnaireApp\DictionnaireApp\bin\Debug\DictionnaireApp.exe.config
+C:\Users\Antoi\Source\Repos\TP2_SI\DictionnaireApp\DictionnaireApp\bin\Debug\DictionnaireApp.exe
+C:\Users\Antoi\Source\Repos\TP2_SI\DictionnaireApp\DictionnaireApp\bin\Debug\DictionnaireApp.pdb
+C:\Users\Antoi\Source\Repos\TP2_SI\DictionnaireApp\DictionnaireApp\obj\Debug\DictionnaireApp.csproj.AssemblyReference.cache
+C:\Users\Antoi\Source\Repos\TP2_SI\DictionnaireApp\DictionnaireApp\obj\Debug\DictionnaireApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\Antoi\Source\Repos\TP2_SI\DictionnaireApp\DictionnaireApp\obj\Debug\DictionnaireApp.Properties.Resources.resources
+C:\Users\Antoi\Source\Repos\TP2_SI\DictionnaireApp\DictionnaireApp\obj\Debug\DictionnaireApp.UI_GenerateurDeDictionnaire.resources
+C:\Users\Antoi\Source\Repos\TP2_SI\DictionnaireApp\DictionnaireApp\obj\Debug\DictionnaireApp.csproj.GenerateResource.cache
+C:\Users\Antoi\Source\Repos\TP2_SI\DictionnaireApp\DictionnaireApp\obj\Debug\DictionnaireApp.csproj.CoreCompileInputs.cache
+C:\Users\Antoi\Source\Repos\TP2_SI\DictionnaireApp\DictionnaireApp\obj\Debug\DictionnaireApp.exe
+C:\Users\Antoi\Source\Repos\TP2_SI\DictionnaireApp\DictionnaireApp\obj\Debug\DictionnaireApp.pdb

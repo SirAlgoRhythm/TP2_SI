@@ -12,9 +12,16 @@ namespace DictionnaireApp
 {
     public partial class UI_GenerateurDeDictionnaire : Form
     {
+        private FileManager fileManager;
         public UI_GenerateurDeDictionnaire()
         {
             InitializeComponent();
+            fileManager = new FileManager();
+        }
+
+        private void btn_choisir_file_Click(object sender, EventArgs e)
+        {
+            tb_path.Text = fileManager.SelectionnerFichier();
         }
     }
 }

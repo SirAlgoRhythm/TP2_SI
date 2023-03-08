@@ -61,6 +61,7 @@
             this.btn_choisir_file.TabIndex = 18;
             this.btn_choisir_file.Text = "Fichier";
             this.btn_choisir_file.UseVisualStyleBackColor = true;
+            this.btn_choisir_file.Click += new System.EventHandler(this.btn_choisir_file_Click);
             // 
             // label4
             // 
