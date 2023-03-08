@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DictionnaireApp
 {
-    public partial class GenerateurDeDictionnaireUI : Form
+    public partial class UI_GenerateurDeDictionnaire : Form
     {
-        public GenerateurDeDictionnaireUI()
+        public UI_GenerateurDeDictionnaire()
         {
             InitializeComponent();
         }

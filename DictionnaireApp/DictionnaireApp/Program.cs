@@ -16,7 +16,7 @@ namespace DictionnaireApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GenerateurDeDictionnaireUI());
+            Application.Run(new UI_GenerateurDeDictionnaire());
         }
     }
 }
