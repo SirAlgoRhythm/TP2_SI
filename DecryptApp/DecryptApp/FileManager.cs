@@ -23,7 +23,7 @@ namespace DecryptApp
             return null;
         }
 
-        public string CompterNbMotsFichier(string fileName)
+        public int CompterNbMotsFichier(string fileName)
         {
             StreamReader sr = new StreamReader(fileName);
             int compteur = 0;
@@ -32,7 +32,7 @@ namespace DecryptApp
                 sr.ReadLine();
                 compteur++;
             }
-            return " " + compteur.ToString();
+            return compteur;
         }
     }
 }

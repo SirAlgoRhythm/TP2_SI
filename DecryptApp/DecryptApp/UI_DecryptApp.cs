@@ -16,7 +16,8 @@ namespace DecryptApp
     public partial class UI_DecryptApp : Form
     {
         private FileManager fileManager;
-        private string nbMotsDictionnaire;
+        private string nbMotsDictionnaireStr;
+        private int nbMotsDictionnaire = 0;
         private int nbTentative = 0;
         private long tempsEcoule = 0;
         
@@ -31,9 +32,10 @@ namespace DecryptApp
             tb_fichier.Text = fileManager.SelectionnerFichier();
             if (tb_fichier.Text != null)
             {
-                nbMotsDictionnaire = lbl_nb_mots_dict.Text;
-                nbMotsDictionnaire += fileManager.CompterNbMotsFichier(tb_fichier.Text);
-                lbl_nb_mots_dict.Text = nbMotsDictionnaire;
+                nbMotsDictionnaireStr = lbl_nb_mots_dict.Text;
+                nbMotsDictionnaire = fileManager.CompterNbMotsFichier(tb_fichier.Text);
+                nbMotsDictionnaireStr += nbMotsDictionnaire.ToString();
+                lbl_nb_mots_dict.Text = nbMotsDictionnaireStr;
             }
             else
             {
@@ -58,9 +60,11 @@ namespace DecryptApp
                     resultat = sr.ReadLine();
                     nbTentative++;
                     lbl_nb_tentative.Text = $"{nbTentative}/{nbMotsDictionnaire}";
+                    lbl_nb_tentative.Refresh();
                     tempsEcoule = stopwatch.ElapsedMilliseconds;
                     lbl_temps_ecoule.Text = $"{(tempsEcoule / 1000) / 60}m{(tempsEcoule / 1000) % 60}";
-                } while (!decrypteur.Decripter(resultat) || nbTentative != long.Parse(nbMotsDictionnaire));
+                    lbl_temps_ecoule.Refresh();
+                } while (!decrypteur.Decripter(resultat) || nbTentative != nbMotsDictionnaire);
 
                 string message = $"Votre hachage: \n {tb_hash.Text} \n \n Correspond au mot suivant: \n {resultat}";
                 string caption = "Trouvé!";

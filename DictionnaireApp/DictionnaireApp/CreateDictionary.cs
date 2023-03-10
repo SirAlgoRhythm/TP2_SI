@@ -24,7 +24,7 @@ namespace DictionnaireApp
             for (int i = 0; i < max; i++)
             {
                 //pour traverser la liste d'entrée
-                // on saute les éléments qu'un a déjà fait avec skipToIndex
+                // on saute les éléments qu'on a déjà fait avec skipToIndex
                 for (int j = 0 + skipToIndex; j < listTemp.Count; j++)
                 {
                     //créer un nouvel élément qui contient l'élément de la liste actuelle + l'élément x de la liste initiale
@@ -36,10 +36,10 @@ namespace DictionnaireApp
                     }
                     counter++;
 
-                    // print pour voir l'évolution de la liste
-                    foreach (var value in ListEntree)
-                        Console.Write(value + ", ");
-                    Console.WriteLine();
+                    // print pour voir l'évolution de la liste lors de tests
+                    //foreach (var value in ListEntree)
+                    //    Console.Write(value + ", ");
+                    //Console.WriteLine();
                 }
                 skipToIndex = counter;
                 counter = 0;
