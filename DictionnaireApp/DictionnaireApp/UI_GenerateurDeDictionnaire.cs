@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,11 +48,14 @@ namespace DictionnaireApp
                     caractereUtilise += tableau[i] + ",";
                 }
             }
+            //Enlever la dernière virgule pour pas avoir d'espaces vides
+            caractereUtilise = caractereUtilise.Remove(caractereUtilise.Length-1);
             List<string> list = caractereUtilise.Split(',').ToList();
             int min = (int)numUD_min.Value;
             int max = (int)numUD_max.Value;
 
-            createDictionary.MakeAList(list, min, max);
+            createDictionary.MakeAList(list, min, max, fileManager, tb_path.Text);
+            Validation.Text = "Le fichier a été créé!";
         }
     }
 }
