@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Decrypteur.cs" />
+    <Compile Include="FileManager.cs" />
     <Compile Include="UI_DecryptApp.cs">
       <SubType>Form</SubType>
     </Compile>

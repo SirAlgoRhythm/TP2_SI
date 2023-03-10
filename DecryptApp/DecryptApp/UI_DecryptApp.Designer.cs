@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lbl_tentative_title = new System.Windows.Forms.Label();
             this.lbl_nb_tentative = new System.Windows.Forms.Label();
             this.lbl_tmp_title = new System.Windows.Forms.Label();
@@ -36,8 +37,9 @@
             this.tb_hash = new System.Windows.Forms.TextBox();
             this.btn_valider_hash = new System.Windows.Forms.Button();
             this.lbl_dict_title = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tb_fichier = new System.Windows.Forms.TextBox();
             this.btn_choisir_fichier = new System.Windows.Forms.Button();
+            this.lbl_nb_mots_dict = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_tentative_title
@@ -82,7 +84,7 @@
             // 
             this.lbl_hash_title.AutoSize = true;
             this.lbl_hash_title.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_hash_title.Location = new System.Drawing.Point(12, 154);
+            this.lbl_hash_title.Location = new System.Drawing.Point(12, 199);
             this.lbl_hash_title.Name = "lbl_hash_title";
             this.lbl_hash_title.Size = new System.Drawing.Size(150, 19);
             this.lbl_hash_title.TabIndex = 4;
@@ -90,7 +92,7 @@
             // 
             // tb_hash
             // 
-            this.tb_hash.Location = new System.Drawing.Point(13, 177);
+            this.tb_hash.Location = new System.Drawing.Point(13, 222);
             this.tb_hash.Name = "tb_hash";
             this.tb_hash.Size = new System.Drawing.Size(316, 20);
             this.tb_hash.TabIndex = 5;
@@ -98,7 +100,7 @@
             // btn_valider_hash
             // 
             this.btn_valider_hash.BackColor = System.Drawing.SystemColors.Control;
-            this.btn_valider_hash.Location = new System.Drawing.Point(335, 175);
+            this.btn_valider_hash.Location = new System.Drawing.Point(335, 220);
             this.btn_valider_hash.Name = "btn_valider_hash";
             this.btn_valider_hash.Size = new System.Drawing.Size(75, 23);
             this.btn_valider_hash.TabIndex = 6;
@@ -116,12 +118,12 @@
             this.lbl_dict_title.TabIndex = 7;
             this.lbl_dict_title.Text = "Saisir le fichier qui contient le dictionnaire ici:";
             // 
-            // textBox1
+            // tb_fichier
             // 
-            this.textBox1.Location = new System.Drawing.Point(13, 107);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(316, 20);
-            this.textBox1.TabIndex = 8;
+            this.tb_fichier.Location = new System.Drawing.Point(13, 107);
+            this.tb_fichier.Name = "tb_fichier";
+            this.tb_fichier.Size = new System.Drawing.Size(316, 20);
+            this.tb_fichier.TabIndex = 8;
             // 
             // btn_choisir_fichier
             // 
@@ -134,13 +136,24 @@
             this.btn_choisir_fichier.UseVisualStyleBackColor = false;
             this.btn_choisir_fichier.Click += new System.EventHandler(this.btn_choisir_fichier_Click);
             // 
+            // lbl_nb_mots_dict
+            // 
+            this.lbl_nb_mots_dict.AutoSize = true;
+            this.lbl_nb_mots_dict.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nb_mots_dict.Location = new System.Drawing.Point(16, 146);
+            this.lbl_nb_mots_dict.Name = "lbl_nb_mots_dict";
+            this.lbl_nb_mots_dict.Size = new System.Drawing.Size(167, 19);
+            this.lbl_nb_mots_dict.TabIndex = 10;
+            this.lbl_nb_mots_dict.Text = "Mots dans le dictionnaire: ";
+            // 
             // UI_DecryptApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(435, 212);
+            this.ClientSize = new System.Drawing.Size(435, 261);
+            this.Controls.Add(this.lbl_nb_mots_dict);
             this.Controls.Add(this.btn_choisir_fichier);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tb_fichier);
             this.Controls.Add(this.lbl_dict_title);
             this.Controls.Add(this.btn_valider_hash);
             this.Controls.Add(this.tb_hash);
@@ -166,8 +179,9 @@
         private System.Windows.Forms.TextBox tb_hash;
         private System.Windows.Forms.Button btn_valider_hash;
         private System.Windows.Forms.Label lbl_dict_title;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tb_fichier;
         private System.Windows.Forms.Button btn_choisir_fichier;
+        private System.Windows.Forms.Label lbl_nb_mots_dict;
     }
 }
 
