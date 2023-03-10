@@ -27,5 +27,6 @@ namespace DictionnaireApp
         {
             return new StreamWriter(fileName);
         }
+        
     }
 }

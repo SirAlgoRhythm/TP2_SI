@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ namespace DictionnaireApp
 {
     internal class CreateDictionary
     {
-        public List<string> MakeAList(List<string> ListEntree, int min, int max)
+        public void MakeAList(List<string> ListEntree, int min, int max, FileManager fileManager, string fileName)
         {
             max = max - 1;
             List<string> listTemp = new List<string>();
@@ -35,10 +36,10 @@ namespace DictionnaireApp
                     }
                     counter++;
 
-                    //// print pour voir l'évolution de la liste
-                    //foreach (var value in ListEntree)
-                    //    Console.Write(value +", ");
-                    //Console.WriteLine();
+                    // print pour voir l'évolution de la liste
+                    foreach (var value in ListEntree)
+                        Console.Write(value + ", ");
+                    Console.WriteLine();
                 }
                 skipToIndex = counter;
                 counter = 0;
@@ -57,7 +58,18 @@ namespace DictionnaireApp
                     ListEntree.Remove(result);
                 }
             }
-            return ListEntree;
+
+            //écrire dans le fichier sélectionné
+            using (StreamWriter streamWriter = fileManager.OuvrirFichier(fileName))
+            {
+                foreach (var element in ListEntree)
+                {
+                    streamWriter.WriteLine(element.ToString());
+                }
+                streamWriter.Close();
+            }
+
+
         }
     }
 }
