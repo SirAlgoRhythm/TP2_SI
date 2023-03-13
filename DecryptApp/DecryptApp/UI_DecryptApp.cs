@@ -54,17 +54,21 @@ namespace DecryptApp
                 
                 StreamReader sr = new StreamReader(tb_fichier.Text);
                 string resultat = String.Empty;
+                bool _resultat;
 
                 do
                 {
                     resultat = sr.ReadLine();
+                    _resultat = decrypteur.Decripter(resultat);
+                    if (_resultat)
+                        break;
                     nbTentative++;
                     lbl_nb_tentative.Text = $"{nbTentative}/{nbMotsDictionnaire}";
                     lbl_nb_tentative.Refresh();
                     tempsEcoule = stopwatch.ElapsedMilliseconds;
                     lbl_temps_ecoule.Text = $"{(tempsEcoule / 1000) / 60}m{(tempsEcoule / 1000) % 60}";
                     lbl_temps_ecoule.Refresh();
-                } while (!decrypteur.Decripter(resultat) || nbTentative != nbMotsDictionnaire);
+                } while (!_resultat || nbTentative != nbMotsDictionnaire);
 
                 string message = $"Votre hachage: \n {tb_hash.Text} \n \n Correspond au mot suivant: \n {resultat}";
                 string caption = "Trouvé!";
